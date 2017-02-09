@@ -26,7 +26,6 @@
 
     </form>
 
-
 <?php
 
 // Connexion à la base de données
@@ -35,7 +34,8 @@ try
 
 {
 
-    $bdd = new PDO('mysql:host=localhost;dbname=minichat;charset=utf8', 'Abdul', 'facesimplon');
+    $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'Rawshen2010&');
+    echo "vous êtes connecté";
 
 }
 
@@ -50,7 +50,7 @@ catch(Exception $e)
 
 // Récupération des 10 derniers messages
 
-$reponse = $bdd->query('SELECT pseudo, message FROM message ORDER BY ID DESC LIMIT 0, 10');
+$reponse = $bdd->query('SELECT pseudo, message FROM news ORDER BY ID DESC LIMIT 0, 10');
 
 // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
 
@@ -64,6 +64,7 @@ while ($donnees = $reponse->fetch())
 
 
 $reponse->closeCursor();
+
 
 ?>
 

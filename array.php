@@ -20,7 +20,7 @@ try
 
 {
 
-    $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'Abdul', 'facesimplon');
+    $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'Rawshen2010&');
 
 }
 
@@ -32,7 +32,7 @@ catch(Exception $e)
 
 }
 /*UPPER :convertir en majuscules, LOWER : écrit en minuscules, LENGTH : compter le nombre de caractères
-AVG calculer la moyenne, ROUND : arrondir un nombre décimal, SUM : additionner les valeurs, MAX : retourner la valeur maximale ,MIN : retourner la valeur minimale, 
+AVG calculer la moyenne, ROUND : arrondir un nombre décimal, SUM : additionner les valeurs, MAX : retourner la valeur maximale ,MIN : retourner la valeur minimale,
 
 */
 $reponse = $bdd->query('SELECT UPPER(name) AS test FROM produits');

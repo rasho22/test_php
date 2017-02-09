@@ -1,0 +1,10 @@
+ceci est un test .     //Tester la validité d'une date
+    echo "La date valide est :";
+    var_dump (checkdate(9,28,2015));
+    echo "<br>";
+    echo "La date valide est :";
+    var_dump (checkdate(2,30,2015));
+    echo "<br>";
+    echo "La date valide est :";
+    var_dump (checkdate(2,9,2017));
+    echo "<br>";
